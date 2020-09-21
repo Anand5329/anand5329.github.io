@@ -82,13 +82,6 @@ html {
   font-family: "Source Code Pro", monospace;
 }
 
-.side-wrapper {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 #sidebar {
   min-height: 100vh;
   max-width: 250px;
@@ -96,7 +89,7 @@ html {
   height: 100vh;
 }
 
-#sidebar.hidden {
+.hidden {
   margin-left: -250px;
 }
 /* For mobile **/
@@ -125,8 +118,10 @@ html {
   flex: none;
 }
 
-.collapse-btn {
-  position: relative;
+.col-btn {
+  max-width: 25px;
+  min-width: 25px;
+  margin-top: 0;
 }
 
 .blogpost {
