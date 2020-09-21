@@ -89,20 +89,19 @@ html {
   padding: 0;
 }
 
-.sidebar {
+#sidebar {
   min-height: 100vh;
   max-width: 250px;
   min-width: 250px;
   height: 100vh;
-  position: fixed;
 }
 
-.sidebar.hidden {
+#sidebar.hidden {
   margin-left: -250px;
 }
 /* For mobile **/
 @media only screen and (max-width: 1000px) {
-  .sidebar {
+  #sidebar {
     margin-left: -250px;
   }
   .side {
@@ -110,7 +109,13 @@ html {
   }
 }
 
-@media 
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
 
 .side {
   align-items: stretch;
