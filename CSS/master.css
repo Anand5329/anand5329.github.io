@@ -76,6 +76,7 @@ html {
 
 .title {
   font-size: 4rem;
+  overflow-wrap: break-word;
 }
 
 .source-code-pro {
@@ -91,15 +92,6 @@ html {
 
 .hidden {
   margin-left: -250px;
-}
-/* For mobile **/
-@media only screen and (max-width: 1000px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-  .side {
-    margin-left: -250px;
-  }
 }
 
 .relative {

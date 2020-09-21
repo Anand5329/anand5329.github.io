@@ -1,18 +1,60 @@
+
+var isMob = false;
 $(document).ready(function() {
+  isMob = isMobile();
+
   sideBarScroller($("#sidebar"));//sidebar
-  sideBarScroller($(".btn.flush"));//sidear button
+  sideBarScroller($("sideBarButton"));//sidear button
+
+  $(window).resize(function(){
+    isMob = isMobile();
+    if(isMob)
+    toMob();
+    else
+    toDesktop();
+  });
+
   sideBarToggler();
+
 });
+
+var toMob = function(){
+  var sidebar = $("#sidebar");
+  var side = $(".side");
+
+  sidebar.hide();
+  side.hide();
+
+};
+
+var toDesktop = function(){
+  var sidebar = $("#sidebar");
+  var side = $(".side");
+
+  sidebar.show();
+  side.show();
+
+};
 
 var sideBarToggler = function() {
   //var btn = document.getElementsByName("SideBarButton")[0];
-  var btn = $(".btn.flush")
+  if(isMob)
+    toMob();
+  else
+      toDesktop();
+
+  var btn = $("#sideBarButton")
   //console.log(btn);
   var sidebar = $("#sidebar");
   var side = $(".side");
+  var content = $("#content");
+
   btn.click(function() {
+    console.log("click");
     sidebar.toggle();
     side.toggle();
+    if(isMob)
+      content.toggle();
     //console.log("toggle");
   });
 };
@@ -45,3 +87,20 @@ var sideBarScroller = function(sidebar) {
     }
   });
 };
+
+  var isMobile = function() {
+    var width = $(window).width();
+    var height = $(window).height();
+    var ratio = width/height;
+
+      console.log("isMobile: ");
+    if(ratio < 1)
+    {
+      console.log("true");
+      return true;
+    }
+    else {
+      console.log("false");
+      return false;
+    }
+  };
