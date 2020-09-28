@@ -104,3 +104,14 @@ var sideBarScroller = function(sidebar) {
       return false;
     }
   };
+
+  var createBlogPostCard = function(blogpost) {
+    var content = $("#content");
+    //console.log("Creating Card...");
+    var intro = "<div class='gen'><div class='card blogpost'><div class='card-body'>";
+    var title = "<h4>"+blogpost.Title+"</h4>";
+    var post = "<p>"+blogpost.Post+"</p>";
+    var footer = "</div><div class='card-footer text-muted'>"+blogpost['Date Modified']+"</div></div></div>";
+    
+    content.append(intro+title+post+footer);
+  };
