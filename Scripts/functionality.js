@@ -7,6 +7,7 @@ $(document).ready(function() {
   sideBarScroller($("sideBarButton"));//sidear button
 
   $(window).resize(function(){
+    recolorNavbar();
     isMob = isMobile();
     if(isMob)
     toMob();
@@ -15,6 +16,8 @@ $(document).ready(function() {
   });
 
   sideBarToggler();
+
+  recolorNavbar();
 
 });
 
@@ -64,8 +67,8 @@ var sideBarScroller = function(sidebar) {
     var doc = $(document);
     var win = $(window);
 
-    var nav = $(".navbar");
-    var top = $(".top");
+    var nav = $("#navbar");
+    var top = $("#top");
     var topHeight = top.outerHeight();
     var navHeight = nav.outerHeight();
 
@@ -112,6 +115,31 @@ var sideBarScroller = function(sidebar) {
     var title = "<h4>"+blogpost.Title+"</h4>";
     var post = "<p>"+blogpost.Post+"</p>";
     var footer = "</div><div class='card-footer text-muted'>"+blogpost['Date Modified']+"</div></div></div>";
-    
+
     content.append(intro+title+post+footer);
   };
+
+  var recolorNavbar = function() {
+    var transition = 500;
+    var color = "top-color";
+    var buffer = 64;
+    var threshold = $("#top .title").offset().top - buffer;
+    var navbar = $("#navbar");
+    var navLinks = navbar.find(".nav-link");
+
+    if ($(document).scrollTop() > threshold) {
+      navbar.addClass(color);
+      navLinks.addClass(color);
+    }
+
+    $(document).scroll(function() {
+      //console.log(threshold);
+      if ($(document).scrollTop() > threshold) {
+        navbar.addClass(color, transition);
+        navLinks.addClass(color, transition);
+      } else {
+        navbar.removeClass(color, transition);
+        navLinks.removeClass(color, transition);
+      }
+    });
+  }

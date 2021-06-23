@@ -1,13 +1,23 @@
+#navbar {
+  height: 4rem;
+}
+
 .top {
   background-color: #BF0A0A;
   text-align: center;
   color: #000000;
   padding: 5rem;
+  min-height: 100vh;
+  margin-top: -4rem;
 }
 
 .top-color {
-  background-color: #BF0A0A;
-  color: #000000 !important;
+  background-color: #000000;
+  color: #FFFFFF !important;
+}
+
+.white {
+  color: white;
 }
 
 .gen {
@@ -27,6 +37,7 @@
 
 body{
     background-color: #000000;
+    color: white;
     max-height: 100%;
 }
 
@@ -35,13 +46,30 @@ html {
 }
 
 .center {
+  display: flex;
   text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  flex-direction: column;
 }
 
 .center-item {
   display: inline-block;
   text-align: left;
 }
+
+.right-push {
+  margin-left: 30%;
+}
+
+.left-push {
+  margin-right: 30%;
+}
+
 
 .head {
   font-size: 2rem;
@@ -67,6 +95,17 @@ html {
 .img-clinic {
   width: 40%;
   border: 5px solid #BF0A0A;
+}
+
+.bg-img-top {
+  background-image: url("../Images/bg.jpg");
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile {
