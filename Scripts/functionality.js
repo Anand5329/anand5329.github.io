@@ -28,6 +28,7 @@ var toMob = function(){
   sidebar.hide();
   side.hide();
 
+  $("body").addClass("mobile");
 };
 
 var toDesktop = function(){
@@ -36,6 +37,8 @@ var toDesktop = function(){
 
   sidebar.show();
   side.show();
+
+  $("body").removeClass("mobile");
 
 };
 
