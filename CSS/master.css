@@ -68,12 +68,30 @@ html {
 
 .left-push {
   margin-right: 30%;
+  width: auto;
+  margin-left: 0;
+}
+
+.left-align {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: center;
+
 }
 
 
 .head {
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.sub-head {
+  font-size: 1.5rem;
+}
+
+.content {
+  font-size: 1.3rem;
 }
 
 .caveat {
@@ -86,6 +104,10 @@ html {
 
 .full {
   display: block;
+}
+
+.full-height {
+  min-height: 100vh;
 }
 
 .img-gen {
@@ -101,11 +123,20 @@ html {
   background-image: url("../Images/bg.jpg");
 }
 
+.bg-work {
+  background-image: url("../Images/work.jpg");
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.work-overlay {
+  width: 100vw;
+  background-image: linear-gradient(to right, black, transparent);
 }
 
 .profile {
