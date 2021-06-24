@@ -26,6 +26,10 @@
   padding: 2rem;
 }
 
+.pad {
+  padding: 1rem;
+}
+
 .link {
   color: white;
 }
@@ -94,6 +98,10 @@ html {
   font-size: 1.3rem;
 }
 
+.bio i {
+  font-size: 5rem;
+}
+
 .caveat {
   font-family: 'Caveat', cursive;
 }
@@ -104,6 +112,10 @@ html {
 
 .full {
   display: block;
+}
+
+.full-width {
+  min-width: 100vw;
 }
 
 .full-height {
@@ -127,6 +139,15 @@ html {
   background-image: url("../Images/work.jpg");
 }
 
+.bg-contact {
+  background-image: url("../Images/glass.jpg");
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -137,6 +158,10 @@ html {
 .work-overlay {
   width: 100vw;
   background-image: linear-gradient(to right, black, transparent);
+}
+
+.bio, .contact {
+  min-height: 40vh;
 }
 
 .profile {
