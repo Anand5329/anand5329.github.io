@@ -51,7 +51,7 @@ html {
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .center {
@@ -73,6 +73,8 @@ html, body {
 
 .right-push {
   margin-left: 30%;
+  width: auto;
+  margin-right: 0;
 }
 
 .left-push {
@@ -87,7 +89,6 @@ html, body {
   align-items: center;
   align-self: flex-start;
   justify-content: center;
-
 }
 
 .title {
@@ -129,7 +130,7 @@ html, body {
 }
 
 .full-width {
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 .full-height {
@@ -145,14 +146,14 @@ html, body {
   border: 5px solid #BF0A0A;
 }
 
-.bg-img-top {
-  background-image: url("../Images/bg.jpg");
+.bg-top {
+  background-image: url("../Images/portrait-bg-right.png");
 }
 
 .bg-work {
   /*grayscale*/
   background-image: linear-gradient(black, black),
-   url("../Images/work.jpg");
+   url("../Images/work-left.jpg");
   background-blend-mode: saturation;
 }
 
@@ -171,8 +172,8 @@ html, body {
 }
 
 .work-overlay {
-  width: 100vw;
-  background-image: linear-gradient(to right, black, transparent);
+  width: 100%;
+  background-image: linear-gradient(to left, black, transparent);
 }
 
 .bio, .contact {
