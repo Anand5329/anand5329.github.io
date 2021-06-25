@@ -30,6 +30,10 @@
   padding: 1rem;
 }
 
+.no-pad {
+  padding: 0;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -37,11 +41,14 @@
 .imp-link {
   font-weight: bold;
   background-image: linear-gradient(white, white);
+  border-bottom: white solid 0;
+  transition: border-bottom 0.1s ease-in-out;
+  padding: 0.75rem 0;
 }
 
 .imp-link:hover {
-
-  text-decoration: none;
+  border-bottom: transparent solid 0.25rem;
+  border-image: linear-gradient(90deg, #FFAAD3, #FF9D7A, #FFDE69, #A4E8A3, #8AE6FB, #E2D4FF) 1;
 }
 
 .link {
