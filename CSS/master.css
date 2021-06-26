@@ -173,9 +173,15 @@ html, body {
 }
 
 .img-clinic {
-  width: 40%;
+  width: 70%;
   /* border: 5px solid #BF0A0A; */
 }
+
+.carousel {
+  width: 70%;
+  min-height: 25rem;
+}
+
 
 .bg-top {
   background-image: url("../Images/portrait-bg-2.png");
@@ -325,4 +331,32 @@ html, body {
 .flush {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 576px) {
+  .carousel {
+    width: 100%;
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    width: 100%;
+    min-height: 25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel {
+    width: 80%;
+    min-height: 25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    width: 70%;
+    min-height: 25rem;
+  }
 }
