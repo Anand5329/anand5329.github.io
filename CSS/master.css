@@ -143,6 +143,10 @@ html, body {
   font-size: 3rem;
 }
 
+.contact a {
+  min-height: 4.75rem;
+}
+
 .bio i {
   font-size: 5rem;
 }
@@ -178,7 +182,6 @@ html, body {
 
 .img-clinic {
   width: 70%;
-  /* border: 5px solid #BF0A0A; */
 }
 
 .carousel {
@@ -278,7 +281,7 @@ html, body {
 }
 
 .gradient-hover-mix:hover {
-  background-image: linear-gradient(315deg, maroon 20%, indigo 100%);
+  background-image: linear-gradient(315deg, #E5385E 20%, indigo 100%);
 }
 
 .gradient-hover-spectrum:hover {
