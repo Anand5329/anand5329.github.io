@@ -74,7 +74,6 @@ body {
     background-color: #000000;
     color: white;
     max-height: 100%;
-    font-family: 'Quicksand', sans-serif;
 }
 
 html {
@@ -161,6 +160,10 @@ html, body {
 
 .caveat {
   font-family: 'Caveat', cursive;
+}
+
+.quicksand {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .navbar-font-size {
