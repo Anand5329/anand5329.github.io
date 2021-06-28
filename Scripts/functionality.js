@@ -153,7 +153,7 @@ var sideBarScroller = function(sidebar) {
         navLinks.addClass(color, transition);
       }
 
-      if (getscroll() < threshold) {
+      if (getScroll() < threshold) {
         navbar.removeClass(color, transition);
         navLinks.removeClass(color, transition);
       }
