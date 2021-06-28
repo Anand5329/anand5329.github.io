@@ -122,25 +122,38 @@ var sideBarScroller = function(sidebar) {
     content.append(intro+title+post+footer);
   };
 
+  var getScroll = function () {
+	  var triggerBuffer;
+	  if ($("body").hasClass("mobile")) {
+		  triggerBuffer = 160; //10rem
+		  // console.log(160);
+	  } else {
+		  triggerBuffer = 64; //4rem
+		  // console.log(64);
+	  }
+	  return $(document).scrollTop() + triggerBuffer;
+  };
+
   var recolorNavbar = function() {
     var transition = 500;
     var color = "top-color";
-    var buffer = 64;
-    var threshold = $("#top .title").offset().top - buffer;
+    var threshold = $("#top .title, #top .intro").offset().top;
     var navbar = $("#navbar");
     var navLinks = navbar.find(".nav-link");
 
-    if ($(document).scrollTop() > threshold) {
+    if (getScroll() > threshold) {
       navbar.addClass(color);
       navLinks.addClass(color);
     }
 
     $(document).scroll(function() {
       //console.log(threshold);
-      if ($(document).scrollTop() > threshold) {
+      if (getScroll() > threshold) {
         navbar.addClass(color, transition);
         navLinks.addClass(color, transition);
-      } else {
+      }
+
+      if (getscroll() < threshold) {
         navbar.removeClass(color, transition);
         navLinks.removeClass(color, transition);
       }
