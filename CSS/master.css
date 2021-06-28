@@ -196,7 +196,7 @@ html, body {
 }
 
 
-.bg-top { 
+.bg-top {
   background-image: url("../Images/portrait-bg.png");
 }
 
@@ -236,7 +236,7 @@ html, body {
 .projects-overlay {
   width: 100%;
   /* background-image: radial-gradient(circle at center, black 0%, transparent 50%); */
-  background-image: linear-gradient(to right, black 60%, transparent 100%);
+  background-image: linear-gradient(to right, black 50%, transparent 100%);
 }
 
 .pink-overlay {
@@ -379,4 +379,63 @@ html, body {
     width: 70%;
     min-height: 25rem;
   }
+}
+
+/* Mobile sizes: scaled by 2.5 */
+
+.mobile #navbar, .mobile #navbar a {
+  height: 10rem;
+}
+
+.mobile .pad {
+  padding: 2.5rem!important;
+}
+
+.mobile .top {
+  margin-top: -10rem;
+}
+
+.mobile .title {
+  font-size: 10rem;
+}
+
+.mobile .head {
+  font-size: 6.25rem;
+}
+
+.mobile .sub-head {
+  font-size: 3.75rem;
+}
+
+.mobile .content {
+  font-size: 3.25rem;
+}
+
+.mobile .contact i {
+  font-size: 7.5rem;
+}
+
+.mobile .contact a {
+  min-height: 11.875rem;
+}
+
+.mobile .bio i {
+  font-size: 12.5rem;
+}
+
+.mobile .left-push, .mobile .right-push {
+  margin: auto;
+}
+
+.mobile .bg-top {
+  background-position: bottom right;
+  background-size: 155%;
+}
+
+.mobile .bg-projects {
+  background-position: top right;
+}
+
+.mobile .bg-work {
+  background-position: 30%, 0%;
 }
