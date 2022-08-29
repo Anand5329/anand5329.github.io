@@ -186,6 +186,10 @@ html, body {
   margin: 1rem;
 }
 
+.img-fix-height {
+  max-height: 20rem
+}
+
 .img-clinic {
   width: 70%;
 }
