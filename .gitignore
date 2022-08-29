@@ -2,3 +2,7 @@ Scripts/node_modules/
 Scripts/package-lock.json
 Images/bg.jpg
 Images/*light*
+.ftpquota
+.htaccess
+.htaccess1
+.user.ini
